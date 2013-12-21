@@ -1,0 +1,30 @@
+﻿@*@{
+    ViewBag.Title = "";
+}*@
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+            </p>
+        </div>
+    </section>
+}
+<h3>We suggest the following:</h3>
+<ol>
+    <li class="one">
+        <h5>@Html.ActionLink("View Tweets", "ViewStoredTweets", "Home")</h5>
+    </li>
+    <li class="two">
+        <h5>@Html.ActionLink("Gather More Tweets", "GatherMoreTweets", "Home")</h5>
+    </li>
+    <li class="three">
+        <h5>@Html.ActionLink("Which State is Happier?", "RankStatesByMood", "Home")</h5>
+    </li>
+    <li class="four">
+        <h5>@Html.ActionLink("Chirpy States", "ChirpyStates", "Home")</h5>
+    </li>
+</ol>

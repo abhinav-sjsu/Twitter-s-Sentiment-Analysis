@@ -1,0 +1,29 @@
+﻿@model System.Int32
+
+@if (Model >=9)
+{
+    @:Suspiciously High
+}
+else if (Model < 9 && Model >= 8) {
+    @:Very Happy
+}
+else if (Model < 8 && Model >= 6)
+{
+    @:Pretty Happy
+}
+else if (Model < 6 && Model >= 4)
+{
+    @:Happy
+}
+else if (Model < 4 && Model >= 2)
+{
+    @:There are some dull moments
+}
+else if (Model < 2 && Model >= 0)
+{
+    @:Not really good.
+}
+else
+{
+    @:Pretty Sad
+}

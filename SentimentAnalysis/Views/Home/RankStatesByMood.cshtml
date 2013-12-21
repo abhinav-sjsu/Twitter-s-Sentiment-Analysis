@@ -1,0 +1,39 @@
+﻿@model IEnumerable<SentimentAnalysis.Controllers.StateMood>
+
+@{
+    if (!Model.Any())
+    {
+        ViewBag.Title = "No Data Available for Analysis";
+        <h2>No Data Available for Analysis</h2>
+        return;
+    }
+    else
+    {
+        ViewBag.Title = "State Ranks By Mood";
+        <h2>State Ranks By Mood</h2>
+    }
+}
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.State)
+        </th>
+        <th>
+            @Html.DisplayName("Mood Level")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.State)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MoodLevel, "CustomMood")
+        </td>
+    </tr>
+}
+
+</table>
